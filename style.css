@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: beige;
+    color: #333;
+    line-height: 1.6;
+}
+h1, h2 {
+    margin-bottom: 0.5em;
+}
+section {
+    padding: 60px 20px;
+}
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+form button {
+    padding: 10px;
+    background: #00dfd8;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+footer{
+    background: #333;
+    color:#fff;
+    padding: 20px;
+}
