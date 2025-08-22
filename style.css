@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: beige;
+    color: #333;
+    line-height: 1.6;
+}
+a {
+    color:rgb(9, 143, 239);
+    text-align: justify;
+}
+a:hover{
+    color: #23476f;
+}
+#about,#projects, #skills, #resume, #contact{
+    background-color: bisque;
+    margin: 10px;
+    border-radius: 15px;
+}
+h2{
+    text-align: center;
+}
+p{
+    text-align: center;
+    text-align: justify;
+}
+.skill-list{
+    text-align: center;
+}
+section{
+    box-sizing: border-box;
+    max-width: 700px;
+    margin: 30px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+form{
+    max-width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px;
+    border-radius: 8px;
+    background-color: pink;
+}
+label{
+    display: inline;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+input[type="submit"]{
+    background-color: #007bff;
+    color:white;
+}
+header {
+    background: linear-gradient(to right, #831bcd, #f9620b);
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+}
+form button {
+    display: block; /* Block level so it doesn't inline */
+    width: 50%;
+    padding: 10px 20px;
+    margin-top: 10px; /* Space above the button */
+    background-image: linear-gradient(to right, #831bcd, #f9620b);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-image: linear-gradient(to right, #f9620b, #831bcd);
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Center align the list without flex */
+}
+ul li {
+    display: inline-block; /* Display list items inline for horizontal layout without flex */
+    background: #f0f2f5;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 0 5px; /* Add spacing between list items */
+}
