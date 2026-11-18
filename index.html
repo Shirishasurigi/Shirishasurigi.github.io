@@ -1,69 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <title>SHIRISHA SURIGI | PORTFOLIO</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <header>
-            <center><h1>SHIRISHA SURIGI</h1></center>
-        </header>    
-            <nav>
-                <center>
-                    <a href="#about">About</a><br>
-                    <a href="#projects">Projects</a><br>
-                    <a href="#contact">Contact</a><br>
-                    <a href="#skills">Skills</a><br>
-                    <a href="#resume">resume</a>
-                </center>
-            </nav>
-            <hr>    
-        <section id="about">
-            <h2>About me</h2>
-            <p>I am a passionate and curious B.Tech student with a strong interest in Web Development,design and learning new technologies. I'm currently exploring web development,UI/UX design, building hands-on projects to improve my skills.</p>
-        </section>
-        <hr>
-        <section id="skills">
-            <h2>skills</h2>
-            <div class="skill-list">
-                <span>HTML</span><br>
-                <span>CSS</span><br>
-                <span>JAVASCRIPT</span><br>
-                <span>PYTHON</span><br>
-                <span>FIREBASE</span><br>
-            </div>
-        </section>
-        <hr>
-        <section id="resume">
-            <h2>Resume</h2>
-        </section>
-        <hr>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>PROJECT 1:</strong></li>
-                <li><strong>PROJECT 2:</strong></li>
-            </ul>
-        </section>
-        <hr>
-        <section id="contact">
-            <center>
-            <h2>contact me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br><br>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shirisha Surigi | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#0d0e12;--panel:rgba(30,29,34,.66);--line:rgba(201,169,97,.2);--tx:#efe9dc;--mut:#a39d8f;--a:#d4b46a;--b:#a8793f;--c:#e9d9ae;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Inter',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+h1,h2,h3,h4,nav b{font-family:'Cormorant Garamond',Georgia,serif}
+h3{font-size:1.45rem!important}
+#net{position:fixed;inset:0;z-index:0;width:100%;height:100%}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(212,180,106,.14),transparent 65%);transform:translate(-50%,-50%);left:50%;top:30%}
+main,header,footer{position:relative;z-index:2}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(13,14,18,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav b{font-weight:700;letter-spacing:.02em}
+nav div{display:flex;gap:22px}
+nav a{color:var(--mut);text-decoration:none;font-size:.92rem;transition:color .2s}
+nav a:hover{color:var(--a)}
+section{max-width:1100px;margin:0 auto;padding:110px 5vw 40px}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px;letter-spacing:-.02em}
+.sub{color:var(--mut);margin:0 0 34px;max-width:60ch}
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:120px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar{width:136px;height:136px;border-radius:50%;padding:3px;background:conic-gradient(from 0deg,var(--a),var(--b),var(--c),var(--a));animation:spin 10s linear infinite;margin-bottom:22px}
+.avatar>div{width:100%;height:100%;border-radius:50%;background:#17161b;display:grid;place-items:center;overflow:hidden;font:600 2.8rem 'Cormorant Garamond',Georgia,serif;color:var(--a);animation:spin 10s linear infinite reverse}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.pro{color:#0d0e12;background:var(--a);padding:1px 9px;border-radius:999px;font-size:.7rem}
+.hi{color:var(--a);font-size:.95rem}
+h1{font-size:clamp(2.8rem,9vw,6.4rem);line-height:1;margin:10px 0 14px;letter-spacing:-.02em;font-weight:600;background:linear-gradient(100deg,#fff 20%,var(--a) 55%,var(--b) 85%);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% auto;animation:sheen 7s linear infinite}
+@keyframes sheen{to{background-position:200% center}}
+.role{font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--tx);min-height:2em}
+.cur{display:inline-block;width:2px;height:1.1em;background:var(--a);margin-left:3px;vertical-align:-3px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 22px;border-radius:12px;border:1px solid var(--line);color:var(--tx);text-decoration:none;font-weight:500;background:var(--panel);transition:transform .2s,border-color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);border-color:var(--a);box-shadow:0 8px 30px rgba(212,180,106,.2)}
+.btn.p{background:linear-gradient(120deg,var(--a),var(--b));color:#06081a;border:0}
+.stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:46px;color:var(--mut);font-size:.9rem}
+.stats b{display:block;font-size:1.7rem;color:var(--tx)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;backdrop-filter:blur(10px)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{font:inherit;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer;transition:all .2s}
+.tab:hover{color:var(--tx)}
+.tab[aria-selected=true]{background:linear-gradient(120deg,var(--a),var(--b));color:#06081a;border-color:transparent;font-weight:700}
+.sk{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.sk .card{padding:16px 18px}
+.sk .row{display:flex;justify-content:space-between;font-weight:500}
+.sk small{color:var(--mut)}
+.bar{height:6px;border-radius:9px;background:rgba(148,163,255,.14);margin-top:10px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--b),var(--c));transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.proj{transform-style:preserve-3d;transition:transform .15s ease-out,border-color .2s;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.proj:hover{border-color:var(--a)}
+.proj::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,0),rgba(212,180,106,.14),transparent 55%);opacity:0;transition:opacity .2s;pointer-events:none}
+.proj:hover::after{opacity:1}
+.proj h3{margin:0;font-size:1.2rem}
+.proj p{margin:0;color:var(--mut);font-size:.95rem;flex:1}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tags span{font-size:.75rem;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--a)}
+.proj a{color:var(--tx);text-decoration:none;font-weight:500}
+.proj a:hover{color:var(--a)}
+.soon{border-style:dashed}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:720px){.demo{grid-template-columns:1fr}nav div{gap:14px}nav a{font-size:.8rem}}
+input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:rgba(7,9,18,.7);color:var(--tx);font:inherit}
+input:focus-visible,.tab:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--a);outline-offset:2px}
+.out{font-size:1.9rem;color:var(--a);word-break:break-all;margin:6px 0}
+.pipe{display:flex;flex-direction:column;gap:0}
+.step{display:flex;gap:16px;padding:0 0 26px 0;position:relative}
+.step::before{content:"";position:absolute;left:11px;top:26px;bottom:0;width:2px;background:linear-gradient(var(--a),transparent)}
+.step:last-child::before{display:none}
+.dot{flex:none;width:24px;height:24px;border-radius:50%;background:var(--bg);border:2px solid var(--a);box-shadow:0 0 14px var(--a)}
+.step h4{margin:0}
+.step p{margin:2px 0 0;color:var(--mut)}
+.links{display:flex;gap:14px;flex-wrap:wrap}
+footer{text-align:center;color:var(--mut);padding:50px 5vw 60px;font-size:.85rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="net" aria-hidden="true"></canvas><div id="glow"></div>
+<nav><b style="font-size:1.4rem">SS</b><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
 
-                <button type="submit">Send</button>                
-            </form>
-            </center>
-        </section>
-        <footer>
-            <center><p></p>&copy; 2025 Shirisha Surigi</p></center>
-        </footer>
-    </body>
+<header id="hero" style="max-width:1100px;margin:0 auto;padding:120px 5vw 40px;min-height:100vh;display:flex;flex-direction:column;justify-content:center">
+  <div class="avatar"><div id="pic">SS</div></div>
+  <div class="hi mono">$ hello, world. I’m</div>
+  <h1>Shirisha Surigi</h1>
+  <div class="role mono"><span id="typed"></span><span class="cur"></span></div>
+  <p class="sub" style="margin-top:18px">B.Tech student and AI/ML developer who builds LLM, deep learning and computer vision projects, backed by solid full-stack skills in Python, React and Node.js.</p>
+  <div class="cta">
+    <a class="btn p" href="#projects">See my work</a>
+    <a class="btn" href="https://github.com/Shirishasurigi" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/shirisha-surigi/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <h2>About</h2>
+  <p class="sub">I’m a curious B.Tech student who likes turning ideas into working products. I build full-stack products with Python, React and Node.js, and I work on AI and machine learning, from LLMs and NLP to computer vision with OpenCV and MediaPipe.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">Browse by category. I’m proficient in Python, React and Node.js.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="sk" id="sk"></div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">My strongest work first. Move your cursor over a card.</p>
+  <div class="grid" id="pg"></div>
+</section>
+
+<section id="journey">
+  <h2>Learning path</h2>
+  <p class="sub">How my skills have grown, and where I’m heading.</p>
+  <div class="pipe card">
+    <div class="step"><div class="dot"></div><div><h4>Front end</h4><p>HTML, CSS and JavaScript. Built a to-do list and a finance tracker.</p></div></div>
+    <div class="step"><div class="dot"></div><div><h4>Backend</h4><p>REST APIs and databases, including a URL shortener with click analytics.</p></div></div>
+    <div class="step"><div class="dot"></div><div><h4>AI and ML</h4><p>LLMs, deep learning, computer vision with OpenCV and MediaPipe, and NLP.</p></div></div>
+    <div class="step"><div class="dot"></div><div><h4>Next</h4><p>Ship an ML-powered web app that connects my backend skills with models.</p></div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s connect</h2>
+  <p class="sub">I’m open to internships and entry-level roles in software, AI and ML. The quickest way to reach me is LinkedIn.</p>
+  <div class="links">
+    <a class="btn p" href="https://www.linkedin.com/in/shirisha-surigi/" target="_blank" rel="noopener">Message on LinkedIn</a>
+    <a class="btn" href="https://github.com/Shirishasurigi" target="_blank" rel="noopener">Browse my GitHub</a>
+  </div>
+</section>
+</main>
+<footer>© 2026 Shirisha Surigi</footer>
+
+<script>
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// Skills data: [name, proficient?]
+const SK={
+ "AI / ML":[["Large Language Models (LLMs)"],["Deep Learning"],["Computer Vision"],["OpenCV"],["MediaPipe"],["Natural Language Processing"]],
+ "Languages":[["Python",1],["JavaScript"],["C"]],
+ "Frontend":[["React.js",1],["HTML"],["CSS"]],
+ "Backend & APIs":[["Node.js",1],["Django"],["REST APIs"],["SOAP Web Services"],["Microservices"]],
+ "Databases":[["MySQL"],["MongoDB"],["PostgreSQL"]],
+ "Core CS":[["Data Structures & Algorithms"],["Object-Oriented Programming"],["DBMS"]],
+ "Tools":[["Git"],["GitHub"],["VS Code"],["Jupyter Notebook"],["Firebase"]],
+ "Soft skills":[["Problem solving"],["Clear communication"],["Teamwork"],["Adaptability"],["Time management"],["Continuous learning"]]};
+const tabs=$('#tabs'),sk=$('#sk');
+function show(k){
+ [...tabs.children].forEach(t=>t.setAttribute('aria-selected',t.dataset.k===k));
+ sk.innerHTML=SK[k].map(([n,p])=>`<div class="card"><div class="row"><span>${n}</span>${p?'<small class="mono pro">Proficient</small>':''}</div></div>`).join('');
+}
+Object.keys(SK).forEach(k=>{const b=document.createElement('button');b.className='tab';b.role='tab';b.textContent=k;b.dataset.k=k;b.onclick=()=>show(k);tabs.append(b)});
+show("AI / ML");
+// Projects
+const P=[
+ ["UpShift: Gig System","My flagship project, a gig system built end to end.",["Featured","Gig platform"],"https://github.com/Shirishasurigi?tab=repositories"],
+ ["Gesture-Controlled Robot Simulation","A robot simulation you control with hand gestures, using MediaPipe and machine learning to read gestures from a camera in real time.",["MediaPipe","Machine Learning","Computer Vision","Simulation"],"https://github.com/Shirishasurigi?tab=repositories"],
+ ["Distributed URL Shortener","Spring Boot service that creates Base62 short links, redirects with HTTP 302 and tracks click analytics, with a responsive web UI and JUnit tests.",["Java 21","Spring Boot","PostgreSQL","REST"],"https://github.com/Shirishasurigi/distributed-url-shortener"],
+ ["Finance Tracker","A browser app to record and review personal income and spending.",["HTML","CSS","JavaScript"],"https://github.com/Shirishasurigi/Finance-tracker"],
+ ["To-do List","Task manager with a clean interface for adding and completing tasks.",["JavaScript","DOM"],"https://github.com/Shirishasurigi/Todolist"],
+ ["Python Projects","A collection of Python programs that build my foundation for data and ML work.",["Python"],"https://github.com/Shirishasurigi/python-projects"],
+ ["Next: ML-powered web app","Coming soon. A model served behind my own API, with a live interface.",["Python","Deep Learning","REST API"],"https://github.com/Shirishasurigi?tab=repositories",1]];
+$('#pg').innerHTML=P.map(([t,d,g,u,s])=>`<article class="card proj${s?' soon':''}"><h3>${t}</h3><p>${d}</p><div class="tags">${g.map(x=>`<span class="mono">${x}</span>`).join('')}</div><a href="${u}" target="_blank" rel="noopener">${s?'Follow progress':'View on GitHub'}</a></article>`).join('');
+document.querySelectorAll('.proj').forEach(c=>{
+ c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');if(!RM)c.style.transform=`perspective(800px) rotateY(${(x-.5)*10}deg) rotateX(${(.5-y)*10}deg) translateY(-4px)`});
+ c.addEventListener('pointerleave',()=>c.style.transform='')});
+// Typing
+const R=["Full-stack developer","Java and Spring Boot builder","AI and ML developer","UI designer at heart"];let ri=0,ci=0,del=0;
+(function tp(){const w=R[ri];if(RM){$('#typed').textContent=w;return}
+ $('#typed').textContent=w.slice(0,ci);
+ if(!del&&ci<w.length)ci++;else if(!del){del=1;return setTimeout(tp,1400)}else if(ci>0)ci--;else{del=0;ri=(ri+1)%R.length}
+ setTimeout(tp,del?35:70)})();
+// Cursor glow
+const gl=$('#glow');addEventListener('pointermove',e=>{gl.style.left=e.clientX+'px';gl.style.top=e.clientY+'px'});
+// Neural network canvas
+const cv=$('#net'),cx=cv.getContext('2d');let W,H,N=[],m={x:-999,y:-999};
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;const n=Math.min(90,Math.floor(W*H/17000));N=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
+addEventListener('resize',rs);addEventListener('pointermove',e=>{m.x=e.clientX;m.y=e.clientY});rs();
+function fr(){cx.clearRect(0,0,W,H);
+ for(const p of N){if(!RM){p.x+=p.vx;p.y+=p.vy}if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+  const dx=m.x-p.x,dy=m.y-p.y,d=Math.hypot(dx,dy);if(d<160&&!RM){p.x+=dx*.012;p.y+=dy*.012}
+  cx.fillStyle='rgba(212,180,106,.75)';cx.beginPath();cx.arc(p.x,p.y,1.8,0,6.3);cx.fill()}
+ for(let i=0;i<N.length;i++)for(let j=i+1;j<N.length;j++){const a=N[i],b=N[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){cx.strokeStyle=`rgba(239,233,220,${.16*(1-d/130)})`;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
+ for(const p of N){const d=Math.hypot(m.x-p.x,m.y-p.y);if(d<160){cx.strokeStyle=`rgba(212,180,106,${.55*(1-d/160)})`;cx.beginPath();cx.moveTo(m.x,m.y);cx.lineTo(p.x,p.y);cx.stroke()}}
+ requestAnimationFrame(fr)}
+fr();
+</script>
+</body>
 </html>
